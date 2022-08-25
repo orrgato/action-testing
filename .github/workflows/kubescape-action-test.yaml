@@ -13,17 +13,17 @@ jobs:
         with:
           args: "--format junit --output results.xml"
           files: "kubernetes-manifest/*.yaml"
-          framework: |
-            nsa,devopsbest
+          #framework: |
+           # nsa,devopsbest
           # control: |
           #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container
-      - name: Archive kubescape scan results
-        uses: actions/upload-artifact@v2
-        with:
-          name: kubescape-scan-report
-          path: results.xml
-      - name: Publish Unit Test Results
-        uses: mikepenz/action-junit-report@v2
-        if: always()
-        with:
-          report_paths: "*.xml" 
+      #- name: Archive kubescape scan results
+       # uses: actions/upload-artifact@v2
+        #with:
+         # name: kubescape-scan-report
+          #path: results.xml
+#      - name: Publish Unit Test Results
+ #       uses: mikepenz/action-junit-report@v2
+  #      if: always()
+   #     with:
+    #      report_paths: "*.xml" 
