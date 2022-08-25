@@ -22,7 +22,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: kubescape-scan-report
-          path: results.xml
+          path: results/results.xml
       - name: Publish Unit Test Results
         uses: mikepenz/action-junit-report@v2
         if: always()
