@@ -12,7 +12,7 @@ jobs:
       - uses: orrgato/Kubescape-github-action@update-user
         with:
           args: "--format junit --output results.xml"
-          files: "kubernetes-manifest/*.yaml"
+          files: "kubernetes-manifest/deployment.yaml"
           #framework: |
            # nsa,devopsbest
           # control: |
