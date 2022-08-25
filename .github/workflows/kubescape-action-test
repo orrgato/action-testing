@@ -1,7 +1,6 @@
 name: kubescape-scan
 
-on:
-  push:
+on: push
 
 jobs:
   kubescape:
