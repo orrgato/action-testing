@@ -12,7 +12,7 @@ jobs:
       - uses: kubescape/github-action@main
         with:
           args: "--format junit --output results.xml"
-          files: "kubernetes-prod/*.yaml"
+          files: "kubernetes-manifest/*.yaml"
           framework: |
             nsa,devopsbest
           # control: |
