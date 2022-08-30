@@ -13,7 +13,7 @@ jobs:
         with:
           args: "--format junit --output results.xml"
           files: "kubernetes-manifest/deployment.yaml"
-          threshold: 50
+         # threshold: 50
           framework: |
             nsa,devopsbest
           # control: |
