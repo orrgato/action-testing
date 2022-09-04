@@ -1,0 +1,22 @@
+[
+    {
+        "name": "exclude-nsa-framework",
+        "policyType": "postureExceptionPolicy",
+        "actions": [
+            "alertOnly"
+        ],
+        "resources": [
+            {
+                "designatorType": "Attributes",
+                "attributes": {
+                    "kind": ".*"
+                }
+            }
+        ],
+        "posturePolicies": [
+            {
+                "frameworkName": "NSA" 
+            }
+        ]
+    }
+]
