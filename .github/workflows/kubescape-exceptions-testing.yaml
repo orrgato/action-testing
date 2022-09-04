@@ -16,13 +16,4 @@ jobs:
           threshold: 50
           framework: |
             nsa,devopsbest
-      - name: Archive kubescape scan results
-        uses: actions/upload-artifact@v2
-        with:
-          name: kubescape-scan-report
-          path: results/results.xml
-      - name: Publish Unit Test Results
-        uses: mikepenz/action-junit-report@v2
-        if: always()
-        with:
-          report_paths: "results/*.xml"
+          exceptions: exceptions/exclude-NSA-framework.json
