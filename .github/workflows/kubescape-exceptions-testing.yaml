@@ -16,3 +16,8 @@ jobs:
           threshold: 50
           framework: |
             nsa,devopsbest
+      - name: Archive kubescape scan results
+        uses: actions/upload-artifact@v2
+        with:
+          name: kubescape-scan-report
+          path: results/results.xml
