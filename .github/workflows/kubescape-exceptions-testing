@@ -1,0 +1,18 @@
+name: kubescape-with-exceptions-scan
+
+on:
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  kubescape-exception:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: orrgato/Kubescape-github-action@issue#4
+        with:
+          args: "--format junit --output results.xml"
+          files: "kubernetes-manifest/deployment.yaml"
+          threshold: 50
+          framework: |
+            nsa,devopsbest
