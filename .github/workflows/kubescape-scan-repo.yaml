@@ -1,0 +1,18 @@
+name: kubescape-repo-scan
+
+on: 
+   push:
+    branches: [ "main" ]
+
+jobs:
+  kubescape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: orrgato/Kubescape-github-action@repo-scan
+        with:
+          scanrepository: "no"
+          files: "kubernetes-manifest/deployment.yaml"
+          threshold: 50
+          framework: |
+            nsa,devopsbest
