@@ -11,8 +11,4 @@ jobs:
       - uses: actions/checkout@master
       - uses: orrgato/Kubescape-github-action@repo-scan
         with:
-          scanrepository: "no"
-          files: "kubernetes-manifest/deployment.yaml"
-          threshold: 50
-          framework: |
-            nsa,devopsbest
+          scanrepository: "yes"
