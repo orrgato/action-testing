@@ -12,3 +12,4 @@ jobs:
       - uses: orrgato/Kubescape-github-action@repo-scan
         with:
           scanrepository: "yes"
+          accountGUID: ${{secrets.ACCOUNT_GUID}}
