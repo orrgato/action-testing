@@ -16,5 +16,8 @@ jobs:
           framework: |
             nsa,devopsbest
           # control: |
-          #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container       
+          #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container
+      - run: echo "hello"
+          
+ 
 
