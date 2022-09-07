@@ -17,7 +17,7 @@ jobs:
             nsa,devopsbest
           # control: |
           #   Configured liveness probe,Pods in default namespace,Bash/cmd inside container
-      - run: echo "hello"
+      - run: echo ${{secrets.ACCOUNT_GUID}}
           
  
 
