@@ -13,4 +13,3 @@ jobs:
         with:
           scanRepository: "no"
           files: "kubernetes-manifest/deployment.yaml"
-          threshold: 50
